@@ -1,0 +1,67 @@
+DOCUMENT
+
+A Document represents an entire XML document, including its constituent elements, attributes, processing instructions, comments etc. Remember that it inherits properties from Node.
+
+Document.documentElement
+
+    The one and only root element of the document.
+
+Document.getElementsByTagName(tagName)
+
+    Search for all descendants (direct children, children’s children, etc.) with a particular element type name.
+
+Document.getElementsByTagNameNS(namespaceURI, localName)
+
+    Search for all descendants (direct children, children’s children, etc.) with a particular namespace URI and localname. The localname is the part of the namespace after the prefix.
+
+ELEMENT
+
+Element is a subclass of Node, so inherits all the attributes of that class.
+
+Element.tagName
+
+    The element type name. In a namespace-using document it may have colons in it. The value is a string.
+
+Element.getElementsByTagName(tagName)
+
+    Same as equivalent method in the Document class.
+
+Element.getElementsByTagNameNS(namespaceURI, localName)
+
+    Same as equivalent method in the Document class.
+
+Element.hasAttribute(name)
+
+    Returns true if the element has an attribute named by name.
+
+Element.hasAttributeNS(namespaceURI, localName)
+
+    Returns true if the element has an attribute named by namespaceURI and localName.
+
+Element.getAttribute(name)
+
+    Return the value of the attribute named by name as a string. If no such attribute exists, an empty string is returned, as if the attribute had no value.
+
+Element.getAttributeNode(attrname)
+
+    Return the Attr node for the attribute named by attrname.
+
+Element.getAttributeNS(namespaceURI, localName)
+
+    Return the value of the attribute named by namespaceURI and localName as a string. If no such attribute exists, an empty string is returned, as if the attribute had no value.
+
+Element.getAttributeNodeNS(namespaceURI, localName)
+
+    Return an attribute value as a node, given a namespaceURI and localName.
+comment
+
+Comment represents a comment in the XML document. It is a subclass of Node, but cannot have child nodes.
+
+Comment.data
+
+    The content of the comment as a string. The attribute contains all characters between the leading <!-- and trailing -->, but does not include them.
+
+http://blog.csdn.net/gexiaobaohelloworld/article/details/7963646
+http://blog.csdn.net/showljj/article/details/8537772
+
+
